@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080a12" />
+  <meta name="description" content="Find your next favorite film with MovieFlix, your cinematic movie discovery guide." />
+  <title>MOVIEFLIX — Movie Discovery</title>
+  <link rel="preconnect" href="https://upload.wikimedia.org" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <nav class="topbar" aria-label="Main navigation">
+    <a class="brand" href="/" aria-label="MOVIEFLIX home">
+      <span class="brand-mark">M</span><span>MOVIE<span class="brand-highlight">FLIX</span></span>
+    </a>
+    <div class="topbar-links">
+      <a href="#discover">Discover</a>
+      <a href="#collection">Collection</a>
+      <span class="topbar-note"><span class="live-dot"></span>Independent movie guide</span>
+    </div>
+    <button id="start-over" class="topbar-cta" type="button" aria-label="Reset filters and return to the start page">
+      <span class="reset-icon" aria-hidden="true">↺</span> Start over
+    </button>
+  </nav>
+
+  <main>
+    <section class="hero" id="discover">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A better kind of movie night</p>
+        <h1>Find the film<br />you <em>feel</em> like watching.</h1>
+        <p class="hero-description">Describe a mood, a moment, or a world you want to escape into. We’ll find the story that fits.</p>
+        <div class="hero-meta">
+          <div class="avatar-stack" aria-hidden="true"><span>✦</span><span>◈</span><span>◉</span></div>
+          <span>Stories for every frame of mind</span>
+          <span class="meta-divider"></span>
+          <span>Curated for movie nights</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-sun"></div>
+        <div class="art-horizon"></div>
+        <div class="art-mountain mountain-back"></div>
+        <div class="art-mountain mountain-front"></div>
+        <div class="art-caption"><span>TONIGHT’S FEATURE</span><span>YOUR NEXT FAVORITE</span></div>
+        <span class="art-index">№ 01 / ∞</span>
+      </div>
+    </section>
+
+    <section class="search-panel" aria-label="Movie search">
+      <div class="search-topline">
+        <div>
+          <p class="section-kicker">YOUR PERSONAL FILM FINDER</p>
+          <h2>What are you in the mood for?</h2>
+        </div>
+        <span class="model-badge"><span class="live-dot"></span> Semantic search</span>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Search type">
+        <button class="tab active" data-mode="search" role="tab" aria-selected="true"><span aria-hidden="true">✳</span> Search by feeling</button>
+        <button class="tab" data-mode="similar" role="tab" aria-selected="false"><span aria-hidden="true">⤳</span> Find something similar</button>
+      </div>
+      <form id="form" class="search-form" autocomplete="off">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="input" type="text" required maxlength="500"
+               placeholder="A dreamy escape with a little mystery…"
+               aria-label="Describe a movie or feeling" />
+        <datalist id="movie-titles"></datalist>
+        <button id="submit" class="go" type="submit">Find my film <span aria-hidden="true">→</span></button>
+      </form>
+      <div class="search-bottom">
+        <p class="prompt-label">NEED A SPARK?</p>
+        <div class="prompt-chips">
+          <button type="button" class="prompt-chip" data-prompt="A visually stunning journey through space">✧ Cosmic wonder</button>
+          <button type="button" class="prompt-chip" data-prompt="A clever mystery with a surprising ending">⌕ Twist-filled mystery</button>
+          <button type="button" class="prompt-chip" data-prompt="A warm, feel-good story about friendship">♡ A little comfort</button>
+        </div>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <div id="recent-searches" class="recent-searches" hidden>
+        <span class="recent-search-label">RECENT</span>
+        <div id="recent-search-list" class="recent-search-list"></div>
+        <button id="clear-recent-searches" class="clear-recent-searches" type="button">Clear</button>
+      </div>
+    </section>
+
+    <section id="search-section" class="search-section" aria-live="polite" hidden>
+      <div class="section-heading">
+        <div><p class="section-kicker">PICKED FOR YOU</p><h2 id="results-title">Your next watch</h2></div>
+        <span id="results-count" class="result-count">Slide to explore</span>
+      </div>
+      <div class="slider-controls" aria-label="Search result controls">
+        <button class="slider-button" type="button" data-scroll="prev" aria-label="Scroll search results left">←</button>
+        <button class="slider-button" type="button" data-scroll="next" aria-label="Scroll search results right">→</button>
+      </div>
+      <div id="results" class="results-grid movie-slider" aria-label="Search results"></div>
+    </section>
+
+    <section class="preferences-section" aria-labelledby="preferences-title" hidden>
+      <div class="section-heading preferences-heading">
+        <div><p class="section-kicker">A LITTLE INSPIRATION</p><h2 id="preferences-title">Pick your movie mood.</h2></div>
+        <span class="collection-count">Legendary · Superhero · Sci-Fi · Fantasy</span>
+      </div>
+      <div id="movie-shelves" class="movie-shelves"></div>
+    </section>
+
+    <section class="collection-section" id="collection">
+      <div class="collection-heading">
+        <div class="section-heading">
+          <div><p class="section-kicker">1980–2026 · THE MOVIEFLIX COLLECTION</p><h2>Stories for every frame of mind.</h2></div>
+        </div>
+        <p class="collection-description">Search titles, years, and genres; filter by IMDb rating, save a watchlist, or let MOVIEFLIX choose.</p>
+      </div>
+      <div class="catalog-toolbar">
+        <div class="catalog-search">
+          <span aria-hidden="true">⌕</span>
+          <input id="catalog-query" type="search" placeholder="Search titles, genres, years…" aria-label="Search titles, genres, or release years" />
+          <button id="clear-catalog-search" class="clear-catalog-search" type="button" aria-label="Clear movie search" hidden>×</button>
+        </div>
+        <label class="sort-control">
+          <span>Sort</span>
+          <select id="sort-movies" aria-label="Sort movies">
+            <option value="popular">Most popular</option>
+            <option value="rating">Top IMDb rating</option>
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="title">Title A–Z</option>
+          </select>
+        </label>
+        <label class="rating-filter">
+          <span>Rating</span>
+          <select id="minimum-rating" aria-label="Filter by minimum IMDb rating">
+            <option value="0">Any</option>
+            <option value="6">6.0+</option>
+            <option value="7">7.0+</option>
+            <option value="8">8.0+</option>
+          </select>
+        </label>
+        <button id="watchlist-toggle" class="watchlist-toggle" type="button" aria-pressed="false">
+          <span aria-hidden="true">♡</span> Watchlist
+        </button>
+        <button id="surprise-pick" class="surprise-pick" type="button">
+          <span aria-hidden="true">✦</span> Surprise me
+        </button>
+      </div>
+      <nav id="genre-tabs" class="genre-tabs" aria-label="Browse by genre">
+        <button class="genre-tab is-active" type="button" data-genre="all" aria-pressed="true">All films</button>
+        <button class="genre-tab" type="button" data-genre="Action" aria-pressed="false">Action</button>
+        <button class="genre-tab" type="button" data-genre="Comedy" aria-pressed="false">Comedy</button>
+        <button class="genre-tab" type="button" data-genre="Drama" aria-pressed="false">Drama</button>
+        <button class="genre-tab" type="button" data-genre="Sci-Fi" aria-pressed="false">Sci-Fi</button>
+        <button class="genre-tab" type="button" data-genre="Animation" aria-pressed="false">Animation</button>
+      </nav>
+      <div id="catalog-grid" class="catalog-grid" aria-live="polite">
+        <div class="catalog-loading"><span class="spinner"></span> Setting the scene…</div>
+      </div>
+      <div class="pagination">
+        <button id="prev-page" class="page-button" type="button" disabled><span aria-hidden="true">←</span> Previous</button>
+        <div id="page-dots" class="page-dots" aria-label="Collection pages"></div>
+        <button id="next-page" class="page-button" type="button">Next <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="movie-dialog" class="movie-dialog" aria-labelledby="dialog-title">
+    <div id="movie-dialog-content" class="movie-dialog-content"></div>
+  </dialog>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="/"><span class="brand-mark">M</span><span>MOVIE<span class="brand-highlight">FLIX</span></span></a>
+    <p>Made for the love of a good story.</p>
+    <a href="#discover">Back to the beginning ↑</a>
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>

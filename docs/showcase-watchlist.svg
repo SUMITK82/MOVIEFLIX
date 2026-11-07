@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="470" viewBox="0 0 720 470" role="img" aria-labelledby="title desc">
+  <title id="title">Movie details and watchlist</title>
+  <desc id="desc">A movie detail dialog with genres, an IMDb rating, a save-to-watchlist button, and similar movie suggestions.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop offset="0" stop-color="#17152b"/><stop offset="1" stop-color="#0c111b"/></linearGradient>
+    <linearGradient id="poster" x2="0" y2="1"><stop offset="0" stop-color="#d7ac82"/><stop offset=".58" stop-color="#795470"/><stop offset="1" stop-color="#27283f"/></linearGradient>
+  </defs>
+  <rect width="720" height="470" rx="24" fill="url(#bg)"/>
+  <rect x="28" y="24" width="664" height="422" rx="17" fill="#0e121c" stroke="#ffffff" stroke-opacity=".12"/>
+  <rect x="52" y="49" width="616" height="372" rx="14" fill="#151925" stroke="#ffffff" stroke-opacity=".14"/>
+  <circle cx="635" cy="72" r="15" fill="#222537"/><text x="635" y="78" fill="#d5d3e2" font-family="Arial,sans-serif" font-size="19" text-anchor="middle">×</text>
+  <rect x="77" y="87" width="156" height="215" rx="10" fill="url(#poster)"/>
+  <circle cx="155" cy="151" r="42" fill="#f2d5a8" opacity=".9"/>
+  <path d="M77 256 120 202l35 33 25-30 53 50v47H77z" fill="#343149"/>
+  <path d="m77 270 57-40 36 35 29-20 34 29v28H77z" fill="#202535"/>
+  <text x="265" y="105" fill="#b9a2ff" font-family="Arial,sans-serif" font-size="10" font-weight="bold" letter-spacing="2">MOVIE DETAILS</text>
+  <text x="265" y="144" fill="#f2effa" font-family="Arial,sans-serif" font-size="26" font-weight="bold">The Hidden Kingdom</text>
+  <text x="265" y="172" fill="#a9a9bb" font-family="Arial,sans-serif" font-size="13">2024 · Fantasy · Adventure</text>
+  <rect x="265" y="194" width="91" height="34" rx="7" fill="#242334" stroke="#e8b545" stroke-opacity=".6"/>
+  <text x="310" y="216" fill="#f4d37e" font-family="Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle">IMDb 8.4/10</text>
+  <rect x="367" y="194" width="163" height="34" rx="7" fill="#29233b" stroke="#b9a2ff" stroke-opacity=".42"/>
+  <text x="448" y="216" fill="#d6c9ff" font-family="Arial,sans-serif" font-size="11" font-weight="bold" text-anchor="middle">♡ Save to watchlist</text>
+  <path d="M265 253h360" stroke="#ffffff" stroke-opacity=".1"/>
+  <text x="265" y="279" fill="#ece9f4" font-family="Arial,sans-serif" font-size="14" font-weight="bold">Similar movies</text>
+  <g transform="translate(265 293)">
+    <g><rect width="104" height="93" rx="8" fill="#202334"/><rect x="6" y="6" width="92" height="55" rx="5" fill="#715c8c"/><circle cx="52" cy="30" r="17" fill="#f1d1a5"/><path d="M6 55 38 38l22 19 15-17 23 16v5H6z" fill="#342e47"/><text x="8" y="79" fill="#e8e6f0" font-family="Arial,sans-serif" font-size="9" font-weight="bold">Another realm</text></g>
+    <g transform="translate(116)"><rect width="104" height="93" rx="8" fill="#202334"/><rect x="6" y="6" width="92" height="55" rx="5" fill="#507181"/><circle cx="52" cy="30" r="17" fill="#e4cda9"/><path d="M6 55 38 37l22 20 15-18 23 16v6H6z" fill="#283746"/><text x="8" y="79" fill="#e8e6f0" font-family="Arial,sans-serif" font-size="9" font-weight="bold">A distant world</text></g>
+    <g transform="translate(232)"><rect width="104" height="93" rx="8" fill="#202334"/><rect x="6" y="6" width="92" height="55" rx="5" fill="#9c6e8e"/><circle cx="52" cy="30" r="17" fill="#f0d4ab"/><path d="M6 55 38 38l22 20 15-17 23 15v5H6z" fill="#392d45"/><text x="8" y="79" fill="#e8e6f0" font-family="Arial,sans-serif" font-size="9" font-weight="bold">A brave adventure</text></g>
+  </g>
+</svg>

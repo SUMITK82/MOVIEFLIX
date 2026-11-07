@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="470" viewBox="0 0 720 470" role="img" aria-labelledby="title desc">
+  <title id="title">Mood-based movie search</title>
+  <desc id="desc">A MOVIEFLIX search screen showing a mood query and a horizontally scrollable row of film recommendations.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop offset="0" stop-color="#17152b"/><stop offset="1" stop-color="#0c111b"/></linearGradient>
+    <linearGradient id="poster1" x2="0" y2="1"><stop offset="0" stop-color="#d9a377"/><stop offset="1" stop-color="#51405b"/></linearGradient>
+    <linearGradient id="poster2" x2="0" y2="1"><stop offset="0" stop-color="#9bc0c2"/><stop offset="1" stop-color="#293653"/></linearGradient>
+    <linearGradient id="poster3" x2="0" y2="1"><stop offset="0" stop-color="#bd83a0"/><stop offset="1" stop-color="#382d51"/></linearGradient>
+  </defs>
+  <rect width="720" height="470" rx="24" fill="url(#bg)"/>
+  <rect x="28" y="24" width="664" height="422" rx="17" fill="#0e121c" stroke="#ffffff" stroke-opacity=".12"/>
+  <rect x="28" y="24" width="664" height="38" rx="17" fill="#171a29"/>
+  <circle cx="49" cy="43" r="5" fill="#fb7c82"/><circle cx="67" cy="43" r="5" fill="#efc268"/><circle cx="85" cy="43" r="5" fill="#75c59d"/>
+  <text x="360" y="47" fill="#9493aa" font-family="Arial,sans-serif" font-size="12" text-anchor="middle">MOVIEFLIX · DISCOVER</text>
+  <text x="61" y="98" fill="#b9a2ff" font-family="Arial,sans-serif" font-size="10" font-weight="bold" letter-spacing="2">YOUR PERSONAL FILM FINDER</text>
+  <text x="61" y="130" fill="#f2effa" font-family="Arial,sans-serif" font-size="24" font-weight="bold">What are you in the mood for?</text>
+  <rect x="61" y="149" width="598" height="48" rx="12" fill="#171b29" stroke="#b9a2ff" stroke-opacity=".45"/>
+  <text x="80" y="179" fill="#bfc0d0" font-family="Arial,sans-serif" font-size="14">A dreamy escape with a little mystery...</text>
+  <rect x="526" y="156" width="121" height="34" rx="8" fill="#b9a2ff"/><text x="586" y="178" fill="#171226" font-family="Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Find my film →</text>
+  <text x="61" y="226" fill="#b9a2ff" font-family="Arial,sans-serif" font-size="10" font-weight="bold" letter-spacing="1.7">PICKED FOR YOU</text>
+  <text x="61" y="252" fill="#f2effa" font-family="Arial,sans-serif" font-size="19" font-weight="bold">Your next watch</text>
+  <g transform="translate(61 269)">
+    <g><rect width="165" height="145" rx="10" fill="#191d2b" stroke="#ffffff" stroke-opacity=".12"/><rect x="9" y="9" width="147" height="86" rx="7" fill="url(#poster1)"/><circle cx="83" cy="43" r="24" fill="#f4d5a5"/><path d="M9 85 51 51l37 33 25-26 43 31v6H9z" fill="#29283d"/><text x="12" y="116" fill="#e9e7f2" font-family="Arial,sans-serif" font-size="11" font-weight="bold">A hidden world awaits</text><text x="12" y="133" fill="#aaaabe" font-family="Arial,sans-serif" font-size="9">Adventure · Mystery</text></g>
+    <g transform="translate(178)"><rect width="165" height="145" rx="10" fill="#191d2b" stroke="#ffffff" stroke-opacity=".12"/><rect x="9" y="9" width="147" height="86" rx="7" fill="url(#poster2)"/><circle cx="82" cy="43" r="22" fill="#e6d3ac"/><path d="M9 83 48 59l32 23 33-37 43 38v12H9z" fill="#263349"/><text x="12" y="116" fill="#e9e7f2" font-family="Arial,sans-serif" font-size="11" font-weight="bold">Beyond the stars</text><text x="12" y="133" fill="#aaaabe" font-family="Arial,sans-serif" font-size="9">Sci-Fi · Drama</text></g>
+    <g transform="translate(356)"><rect width="165" height="145" rx="10" fill="#191d2b" stroke="#ffffff" stroke-opacity=".12"/><rect x="9" y="9" width="147" height="86" rx="7" fill="url(#poster3)"/><circle cx="84" cy="43" r="23" fill="#e8b99a"/><path d="M9 82 48 52l34 31 34-28 40 33v7H9z" fill="#30263e"/><text x="12" y="116" fill="#e9e7f2" font-family="Arial,sans-serif" font-size="11" font-weight="bold">The last great journey</text><text x="12" y="133" fill="#aaaabe" font-family="Arial,sans-serif" font-size="9">Fantasy · Adventure</text></g>
+  </g>
+</svg>
