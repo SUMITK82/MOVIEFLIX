@@ -44,3 +44,4 @@ Some plot introductions link to their corresponding Wikipedia articles; those su
 ## Project credits
 Author - **Sumit Kumar**.
 The frontend was developed with AI assistance.
+I know limited about HTML/CSS and JS so i used AI to bult it.
